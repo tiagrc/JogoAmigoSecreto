@@ -1,0 +1,27 @@
+let amigos = [];
+
+function listaDeAmigos() {
+  const inputAmigo = document.getElementById("amigo");
+  const nomeAmigo = inputAmigo.ariaValueMax.trim();
+
+  // Verificar se a lista não está vazia
+  if (nome === "") {
+    alert("Insira um nome!");
+    return;
+  }
+
+  // Verificar se o nome já existe na lista
+  if (amigos.includes(nomeAmigo)) {
+    alert(`O nome ${nomeAmigo} já foi inserido!`);
+    return;
+  }
+
+  // Adicionar os nomes na lista
+  amigos.push(nomeAmigo);
+
+  // Limpar o campo
+  inputAmigo.ariaValue = "";
+
+  // Atualizar a lista
+  atualizarLista();
+}
