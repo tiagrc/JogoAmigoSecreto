@@ -35,12 +35,26 @@ function atualizarLista() {
 
   // Correr array
   for (let i = 0; i < amigos.length; i++) {
-    const li = document.createElement('li');
+    const li = document.createElement("li");
     li.textContent = amigos[i];
     listaAmigos.appendChild(li);
-    
+  }
+}
+
+function sortearAmigo() {
+  // Verificar se há amigos disponíveis
+  if (amigos.length === 0) {
+    alert("Sem amigos disponíveis para sortear! Adicione pelo menos um.");
+    return;
   }
 
+  // Gerar um índice aleatório
+  const indiceAleatorio = Math.floor(Math.random() * amigos.length);
 
+  // Obetendo amigo sorteado
+  const amigoSorteado = amigos[indiceAleatorio];
 
+  // Mostrar o resultado
+  const resultado = document.getElementById("resultado");
+  resultado.innerHTML = `Amigo sorteado: <strong>${amigoSorteado}<strong>`;
 }
