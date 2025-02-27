@@ -1,5 +1,6 @@
 let amigos = [];
-// alert("Bem vindo ao jogo do amigo-secreto");
+alert("Bem-vindo (a) ao sorteio do amigo secreto!");
+alert("Para limpar os campos, basta recarregar a página!! Bom sorteio (:");
 
 function adicionarAmigo() {
   const inputAmigo = document.getElementById("amigo");
@@ -45,7 +46,7 @@ function atualizarLista() {
 function sortearAmigo() {
   // Verificar se há amigos disponíveis
   if (amigos.length <= 2) {
-    alert("Sem amigos disponíveis para sortear! Adicione pelo menos 3 nomes!");
+    alert("Adicione pelo menos 3 nomes!");
     return;
   }
 
@@ -57,5 +58,5 @@ function sortearAmigo() {
 
   // Mostrar o resultado
   const resultado = document.getElementById("resultado");
-  resultado.innerHTML = `Amigo sorteado: <strong>${amigoSorteado}<strong>`;
+  resultado.innerHTML = `Amigo sorteado: ${amigoSorteado}`;
 }
