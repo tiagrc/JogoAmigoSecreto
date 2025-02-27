@@ -1,26 +1,27 @@
 let amigos = [];
+// alert("Bem vindo ao jogo do amigo-secreto");
 
-function listaDeAmigos() {
+function adicionarAmigo() {
   const inputAmigo = document.getElementById("amigo");
-  const nomeAmigo = inputAmigo.ariaValueMax.trim();
+  const amigoAdd = inputAmigo.value;
 
-  // Verificar se a lista não está vazia
-  if (nome === "") {
+  // Verificar se a lista está vazia
+  if (amigoAdd === "") {
     alert("Insira um nome!");
     return;
   }
 
   // Verificar se o nome já existe na lista
-  if (amigos.includes(nomeAmigo)) {
-    alert(`O nome ${nomeAmigo} já foi inserido!`);
+  if (amigos.includes(amigoAdd)) {
+    alert(`O nome ${amigoAdd} já foi inserido!`);
     return;
   }
 
   // Adicionar os nomes na lista
-  amigos.push(nomeAmigo);
+  amigos.push(amigoAdd);
 
   // Limpar o campo
-  inputAmigo.ariaValue = "";
+  inputAmigo.value = "";
 
   // Atualizar a lista
   atualizarLista();
@@ -28,7 +29,7 @@ function listaDeAmigos() {
 
 // Funcao para atualizar a lista de amigos
 function atualizarLista() {
-  const listaAmigos = document.getElementById("listAmigos");
+  const listaAmigos = document.getElementById("listaAmigos");
 
   // Limpar conteúdo atual da lista
   listaAmigos.innerHTML = "";
@@ -43,8 +44,8 @@ function atualizarLista() {
 
 function sortearAmigo() {
   // Verificar se há amigos disponíveis
-  if (amigos.length === 0) {
-    alert("Sem amigos disponíveis para sortear! Adicione pelo menos um.");
+  if (amigos.length <= 2) {
+    alert("Sem amigos disponíveis para sortear! Adicione pelo menos 3 nomes!");
     return;
   }
 
