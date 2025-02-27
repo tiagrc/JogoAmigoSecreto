@@ -18,6 +18,9 @@ Um aplicativo para gerenciar sorteios de Amigo Secreto, permitindo organizar par
 - **Mínimo de nomes para sorteio**: 3 nomes
 - **Clique para sortear amigo**
 
+# Acesse o jogo
+👉 [Clique aqui](https://tiagrc.github.io/JogoAmigoSecreto/)
+
 
 ## 📜 Licença
 Este projeto está sob a licença MIT.
